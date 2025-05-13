@@ -1,36 +1,85 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# AI-Powered Developer Portfolio Generator
 
-## Getting Started
+An application that automatically generates and customizes professional developer portfolios using data from GitHub and LinkedIn, powered by AI.
 
-First, run the development server:
+## 📸 Dashboard Preview
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+![AI Portfolio Generator Dashboard](/public/images/dashboard.png)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The dashboard provides an overview of your portfolio status, connected accounts, and quick actions to manage your portfolio.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🛠️ Tech Stack
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Framework**: Next.js 14+ with App Router and Server Components
+- **UI Components**: shadcn/ui for accessible and customizable UI elements
+- **Styling**: Tailwind CSS for utility-first styling
+- **Authentication**: NextAuth.js for GitHub and LinkedIn OAuth integration
+- **AI Integration**: Vercel AI SDK with Model Context Protocol (MCP) for generative UI and data processing
+- **Deployment**: Vercel for seamless hosting and CI/CD
 
-## Learn More
+## 🔑 Core Features
 
-To learn more about Next.js, take a look at the following resources:
+1. **User Authentication**
+   - OAuth sign-in with GitHub and LinkedIn using NextAuth.js
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2. **Data Source Integration**
+   - Fetch user data from GitHub (repositories, commits) and LinkedIn (profile information)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+3. **AI-Generated Portfolio Layout**
+   - Process fetched data to generate personalized portfolio layouts
+   - Use AI to structure data and generate content
 
-## Deploy on Vercel
+4. **Theme Customization**
+   - Theme editor with predefined themes and customization options
+   - Persist user preferences
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+5. **Portfolio Management**
+   - Edit, update, publish, or unpublish portfolio content
+   - Simple CMS-like interface for content management
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+6. **Public Portfolio Sharing**
+   - Unique subdomain for each published portfolio
+   - Dynamic routing for user portfolios
+
+## 🚀 Getting Started
+
+1. Clone the repository
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Set up environment variables:
+   Create a `.env.local` file with the following variables:
+   ```
+   # NextAuth
+   NEXTAUTH_URL=http://localhost:3000
+   NEXTAUTH_SECRET=your-secret-key
+   
+   # GitHub OAuth
+   GITHUB_ID=your-github-client-id
+   GITHUB_SECRET=your-github-client-secret
+   
+   # LinkedIn OAuth
+   LINKEDIN_ID=your-linkedin-client-id
+   LINKEDIN_SECRET=your-linkedin-client-secret
+   
+   # AI Provider
+   AI_PROVIDER_API_KEY=your-ai-provider-api-key
+   ```
+
+4. Run the development server:
+   ```bash
+   npm run dev
+   ```
+
+5. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+## 📚 Resources and References
+
+- [shadcn/ui Documentation](https://ui.shadcn.com/docs)
+- [Vercel AI SDK Guide](https://sdk.vercel.ai/docs)
+- [NextAuth.js Documentation](https://next-auth.js.org/getting-started/introduction)
+- [GitHub API Reference](https://docs.github.com/en/rest)
+- [LinkedIn API Documentation](https://docs.microsoft.com/en-us/linkedin/)
