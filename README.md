@@ -10,11 +10,18 @@ The dashboard provides an overview of your portfolio status, connected accounts,
 
 ## 🛠️ Tech Stack
 
-- **Framework**: Next.js 14+ with App Router and Server Components
-- **UI Components**: shadcn/ui for accessible and customizable UI elements
-- **Styling**: Tailwind CSS for utility-first styling
-- **Authentication**: NextAuth.js for GitHub and LinkedIn OAuth integration
-- **AI Integration**: Vercel AI SDK with Model Context Protocol (MCP) for generative UI and data processing
+- **Framework**: Next.js 15.5+ with App Router, Server Components, and Turbopack
+- **Runtime**: React 19.2 with latest concurrent features
+- **UI Components**: shadcn/ui with Radix UI primitives for accessible components
+- **Styling**: Tailwind CSS v4 with utility-first approach and custom animations
+- **Authentication**: NextAuth.js v5 for GitHub and LinkedIn OAuth integration
+- **AI Integration**: Vercel AI SDK v4.3+ with Model Context Protocol (MCP) support
+- **Form Handling**: React Hook Form with Zod validation
+- **State Management**: Built-in React state with server components
+- **Icons**: Lucide React for consistent iconography
+- **Notifications**: Sonner for toast notifications
+- **Theme System**: next-themes for dark/light mode support
+- **Type Safety**: TypeScript 5+ with strict configuration
 - **Deployment**: Vercel for seamless hosting and CI/CD
 
 ## 🔑 Core Features
@@ -40,6 +47,34 @@ The dashboard provides an overview of your portfolio status, connected accounts,
 6. **Public Portfolio Sharing**
    - Unique subdomain for each published portfolio
    - Dynamic routing for user portfolios
+
+## 💰 Pricing Tiers
+
+### 🆓 Free Tier
+- **Self-Hosting**: Deploy on your own infrastructure with full control
+- **Built-in CMS**: Manage portfolio content with an intuitive content management system
+- **Limited Generations**: Generate up to 3 AI-powered portfolio layouts per month
+- **Basic Themes**: Access to 5 professionally designed themes
+- **GitHub Integration**: Connect and showcase your GitHub repositories
+- **Static Export**: Export your portfolio as static HTML/CSS files
+
+### ⭐ Premium Tier
+- **Cloud Hosting**: Hassle-free hosting on our optimized infrastructure
+- **Unlimited Generations**: Generate unlimited AI-powered portfolio variations
+- **Premium Theme Library**: Access to 50+ professionally designed themes
+- **Unlimited Exports**: Export in multiple formats (HTML, PDF, React components)
+- **ATS-Friendly Resume Generation**: AI-powered resume creation optimized for Applicant Tracking Systems
+- **Advanced Analytics**: Track portfolio views, engagement, and visitor insights
+- **Custom Domain Support**: Use your own domain for professional branding
+- **LinkedIn Integration**: Full LinkedIn profile data integration
+- **Priority AI Processing**: Faster generation times with dedicated resources
+- **Advanced Customization**: Custom CSS injection and component overrides
+- **SEO Optimization**: Advanced meta tags, structured data, and search optimization
+- **Portfolio Templates**: Industry-specific templates (Frontend, Backend, DevOps, etc.)
+- **Code Snippet Highlighting**: Advanced syntax highlighting for project showcases
+- **Integration APIs**: Connect with additional platforms (GitLab, Bitbucket, Stack Overflow)
+- **Collaboration Features**: Share drafts with team members or mentors for feedback
+- **Version History**: Track and revert portfolio changes with full version control
 
 ## 🚀 Getting Started
 
@@ -73,8 +108,30 @@ The dashboard provides an overview of your portfolio status, connected accounts,
    ```bash
    npm run dev
    ```
+   
+   The development server uses Turbopack for faster builds and hot reloading.
 
 5. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+## 🧪 Development
+
+### Available Scripts
+
+- `npm run dev` - Start development server with Turbopack
+- `npm run build` - Build the application for production
+- `npm run start` - Start the production server
+- `npm run lint` - Run ESLint for code quality checks
+
+### Project Structure
+
+```
+src/
+├── app/                 # Next.js App Router pages
+├── components/          # Reusable UI components
+│   └── ui/             # shadcn/ui components
+├── lib/                # Utility functions and configurations
+└── types/              # TypeScript type definitions
+```
 
 ## 📚 Resources and References
 
